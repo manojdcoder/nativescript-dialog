@@ -6,7 +6,7 @@ exports.show = function (options) {
     return new Promise(function (resolve, reject) {
         try {
             if (options) {
-                var alert = SDCAlertController.alloc().initWithTitleMessagePreferredStyle(options.title || "", options.message || "", SDCAlertControllerStyle.Alert);
+                var alert = SDCAlertController.alloc().initWithTitleMessagePreferredStyle(options.title || "", options.message || "", AlertControllerStyle.Alert);
 
                 if (options.nativeView instanceof UIView) {
                     alert.contentView.addSubview(options.nativeView);
