@@ -46,6 +46,11 @@ exports.show = function (options) {
           					}));
                 }
 
+                var cancelable = options.cancelable;
+                if (cancelable !== 'undefined') {
+                    alert.setCancelable(cancelable);
+                }
+
                 result = {};
                 result.resolve = resolve,
                 result.dialog = alert.show();
